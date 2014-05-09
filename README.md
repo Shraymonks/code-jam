@@ -7,10 +7,11 @@ Fill in the parse function to parse the input for a single test case.
 Returns an array of arguments that are used for your solve function.
 
 ### Input Consumption Methods
-- ```input.readLine``` Consumes until next ```\n``` character
-- ```input.readWord``` Consumes until next whitespace character
-- ```input.readInt``` Calls parseInt on ```input.readWord```
-- ```input.readFloat``` Calls parseFloat on ```input.readWord```
+- ```input.readLine()``` Consumes until next ```\n``` character
+- ```input.readWord()``` Consumes until next whitespace character
+- ```input.readInt([radix])``` Calls parseInt on ```input.readWord``` ```radix``` defaults to ```10```
+- ```input.readFloat()``` Calls parseFloat on ```input.readWord```
+- ```input.readLines(n)```, ```input.readWords(n)```, ```input.readInts(n, [radix])```, ```input.readFloats(n)``` helper methods to return an array containing the input from the respective method repeated ```n``` times
 
 ## solve
 Implement this function to solve a single test case.

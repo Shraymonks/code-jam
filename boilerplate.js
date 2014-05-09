@@ -9,7 +9,7 @@ var parse = function (input) {
 
 // Solution Implementation
 var solve = function (N) {
-	
+
 };
 
 
@@ -56,12 +56,46 @@ Input.prototype = {
 			return result[1];
 		}
 	},
-	readInt: function () {
-		return parseInt(this.readWord(), 10);
+	readInt: function (radix) {
+		if (typeof radix !== 'number') {
+			radix = 10;
+		}
+		return parseInt(this.readWord(), radix);
 	},
 	readFloat: function () {
 		return parseFloat(this.readWord());
-	}
+	},
+	readLines: function (n) {
+		var lines = [];
+		for (var i = 0; i < n; i++) {
+			lines.push(this.readLine());
+		}
+		return lines;
+	},
+	readWords: function (n) {
+		var words = [];
+		for (var i = 0; i < n; i++) {
+			words.push(this.readWord());
+		}
+		return words;
+	},
+	readInts: function (n, radix) {
+		var ints = [];
+		if (typeof radix !== 'number') {
+			radix = 10;
+		}
+		for (var i = 0; i < n; i++) {
+			ints.push(this.readInt(radix));
+		}
+		return ints;
+	},
+	readFloats: function (n) {
+		var floats = [];
+		for (var i = 0; i < n; i++) {
+			floats.push(this.readFloat());
+		}
+		return floats;
+	},
 };
 
 
