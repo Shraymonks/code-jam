@@ -65,36 +65,24 @@ Input.prototype = {
 	readFloat: function () {
 		return parseFloat(this.readWord());
 	},
-	readLines: function (n) {
-		var lines = [];
+	readN: function (n, f) {
+		var res = [];
 		for (var i = 0; i < n; i++) {
-			lines.push(this.readLine());
+			res.push(f(this));
 		}
-		return lines;
+		return res;
+	},
+	readLines: function (n) {
+		return this.readN(n, this.readLine.bind(this));
 	},
 	readWords: function (n) {
-		var words = [];
-		for (var i = 0; i < n; i++) {
-			words.push(this.readWord());
-		}
-		return words;
+		return this.readN(n, this.readWord.bind(this));
 	},
 	readInts: function (n, radix) {
-		var ints = [];
-		if (typeof radix !== 'number') {
-			radix = 10;
-		}
-		for (var i = 0; i < n; i++) {
-			ints.push(this.readInt(radix));
-		}
-		return ints;
+		return this.readN(n, this.readInt.bind(this, radix));
 	},
 	readFloats: function (n) {
-		var floats = [];
-		for (var i = 0; i < n; i++) {
-			floats.push(this.readFloat());
-		}
-		return floats;
+		return this.readN(n, this.readFloat.bind(this));
 	},
 };
 
