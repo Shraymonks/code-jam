@@ -9,7 +9,7 @@ var parse = function(input) {
 
 // Solution Implementation
 var solve = function(N) {
-
+  return N;
 };
 
 
