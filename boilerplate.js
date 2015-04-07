@@ -73,16 +73,16 @@ Input.prototype = {
     return res;
   },
   readLines: function(n) {
-    return this.readN(n, this.readLine.bind(this));
+    return this.readN(n, this.readLine);
   },
   readWords: function(n) {
-    return this.readN(n, this.readWord.bind(this));
+    return this.readN(n, this.readWord);
   },
   readInts: function(n, radix) {
     return this.readN(n, this.readInt.bind(this, radix));
   },
   readFloats: function(n) {
-    return this.readN(n, this.readFloat.bind(this));
+    return this.readN(n, this.readFloat);
   }
 };
 
