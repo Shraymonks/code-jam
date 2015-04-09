@@ -68,7 +68,7 @@ Input.prototype = {
   readN: function(n, f) {
     var res = [];
     for (var i = 0; i < n; i++) {
-      res.push(f(this));
+      res.push(f.call(this, this));
     }
     return res;
   },
