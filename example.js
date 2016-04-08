@@ -16,7 +16,7 @@ solve(input => {
     case 0:
       return 'Volunteer cheated!';
     case 1:
-      return chosen[0];
+      return chosenCards[0];
     default:
       return 'Bad magician!';
   }
