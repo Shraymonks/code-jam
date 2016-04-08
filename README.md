@@ -2,7 +2,7 @@
 A package for solving Code Jam problems in JavaScript
 
 ## Installation
-```
+```sh
 npm install code-jam
 ```
 
@@ -11,7 +11,7 @@ Check out `example.js` for an example solution.
 
 
 Include `code-jam` in your solution:
-```
+```js
 const solve = require('code-jam').solve;
 ```
 
@@ -35,7 +35,7 @@ See below on how to use `input`.
 - `input.readN(n, f)` Returns an array created from calling the function `f` n times.
 
 ## Running your solution
-```
+```sh
 node yourSolution.js [a.in]
 ```
 If an input file `a.in` is provided, an output file `a.out` will be saved in the same directory.
