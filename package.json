@@ -1,0 +1,8 @@
+{
+  "author": "Raymond Ha <raymond@shraymonks.com> (http://shraymonks.com)",
+  "description": "A package for solving Code Jam problems in JavaScript",
+  "main": "code-jam.js",
+  "name": "code-jam",
+  "repository": "shraymonks/code-jam",
+  "version": "0.1.0"
+}
